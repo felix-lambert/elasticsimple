@@ -32,7 +32,7 @@ Save an announce for example :
         nbComment: 0,
         FORMATTED_DATE: moment(announce.DATE_CREATED).format('DD/MM/YYYY, hA:mm')
       };
-      elasticsimple.save('announce', 'ann', saveItem._id.toHexString(), body, function(err) {
+      elasticsimple.save('announce', 'ann', announceID, body, function(err) {
         cb(err ? err : null, announce);
       });
 ```
